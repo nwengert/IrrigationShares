@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom';
 //routes
-import AdminPortal from '../public/routes-Admin/AdminPortal';
+import AdminPortal from './AdminPortal';
 
 const App = () => {
     return (
