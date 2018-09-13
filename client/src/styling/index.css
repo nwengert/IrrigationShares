@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+}
+.topOfWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+.topOfWrapper .navbar{
+    z-index: 2;
+    position: sticky;
+    top: 0;
+}
+.topOfWrapper img{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+}
+.topOfWrapper h1{
+    z-index: 2;
+    margin: 22px 0 9px 0;
+    color: rgb(60, 40, 25);
+}
+.routesDiv{
+    z-index: 3;
+    background: whitesmoke;
+}
+.wrapper{
+    max-width: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(to right, whitesmoke, rgb(236, 236, 236));
+}
+
