@@ -9,7 +9,7 @@ function Navbar(props) {
             {pathname !== '/'      && <Link className='navBtn' id='Home'  to='/'>      Home</Link>}
             {pathname !== '/Admin' && <Link className='navBtn' id='Admin' to='/Admin'> Admin</Link>}
             {pathname !== '/User'  && <Link className='navBtn' id='User'  to='/User'>  User</Link>}
-            {pathname !== '/WaterShares'  && <Link className='navBtn' id='WaterShares'  to='/WaterShares'>  Water Shares</Link>}
+            {pathname !== '/WaterShares'  && <Link className='navBtn' id='WaterShares'  to='/WaterShares'>Shares</Link>}
         </div>
     )
 }

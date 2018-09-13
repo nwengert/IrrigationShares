@@ -11,10 +11,8 @@ const App = () => {
     return (
         <div className='wrapper'>
             <div className='topOfWrapper'>
-                <h1>Grovers Hill Irrigation District</h1>
+                <span className='GHIGspan'>Grovers Hill <br/>Irrigation District</span>
                 <Navbar />
-                <div>
-                </div>
             </div>            
             <div className='routesDiv'>
                 <Switch>

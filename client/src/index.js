@@ -6,6 +6,8 @@ import App from './App';
 import './styling/navbar.css';
 import './styling/index.css';
 import './styling/Admin.css';
+import './styling/WaterShares.css';
+import './styling/topOfWrapper.css';
 //images
 import './images/LymanLake.jpg';
 
