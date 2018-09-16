@@ -1,32 +1,45 @@
 import React, { Component } from 'react'
 
+const mes = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const startDate = new Date("15 April 2018");
+const _Start = ` ${mes[startDate.getMonth()]} ${startDate.getDate()}`
 const endDate = new Date("15 Sept 2018");
-const today = new Date();
+// const _EndDate = ` ${mes[endDate.getMonth()]} ${endDate.getDate()}`
 const lastUpdate = new Date();
+const _Last = ` ${mes[lastUpdate.getMonth()]} ${lastUpdate.getDate()}`
+const today = new Date();
 const daysRemaining = Math.round((endDate.getTime()-today.getTime())/(1000*60*60*24));
 
 export default class WaterShares extends Component {
     render() {
         return (
             <div className='waterSharesWrapper'>
-                <h2>Water Balance Calculation for 2018 Season</h2>
-                <h3>Last Update: {lastUpdate.toDateString()}</h3>
+                <div className='bodyDiv' id='sharesHeader'>
+                    <h2>2018 Water Balance Calculations</h2>
+                    <h3>Last Update: {lastUpdate.toDateString()}</h3>
+                </div>
                 <div className='bodyDiv' id='lakeVolume'>
                     <h4>Water Volume in Lyman Lake:</h4>
-                    <h5>1 - Measured volume of water in Lyman Lake at midnight {startDate.toDateString()}:</h5>
-                    <h5>2 - Total actual flow released for GHID into canal from 4/15 to 9/9:</h5>
-                    <h5>3 - Total actual flow released into the river below the Dam from 4/15 to 8/29:</h5>
+                    <h5>1 - Measured volume at midnight 
+                            {_Start}:</h5>
+                    <h5>2 - Total actual flow released for GHID into canal from 
+                            {_Start} to {_Last}:</h5>
+                    <h5>3 - Total actual flow released into river below dam from 
+                            {_Start} to {_Last}:</h5>
                     <h5>4 - Total actual flow released into canal for SRP from 5/10 to 8/29:</h5>
-                    <h5>5 - Calculated volume of water in Lyman Lake at midnight September 9, 2018:</h5>
-                    <h5>6 - Measured volume of water in Lyman Lake at midnight September 9, 2018:</h5>
-                    <h5>7 - Estimate of evaporation losses in the Lake from 4/15 to 9/9:</h5>
-                </div>
-                <div className='bodyDiv' id='minToRemain'>
-                    <h4>Calculation of the Minimum Volume of Water to remain in the Lake on 9/15:</h4>
-                    <h5>8 - The minimum pool in Lyman Lake is :</h5>
-                    <h5>9 - The SRP balance is (balance minus current order):</h5>
-                    <h5>10 - The Zuni balance is:</h5>    
+                    <h5>5 - Calculated volume at midnight September 9, 2018:</h5>
+                    <h5>6 - Measured volume at midnight September 9, 2018:</h5>
+                    <h5>7 - Estimate of evaporation loss from 
+                            {_Start} to {_Last}:</h5>
+
+                    <div className='line'>
+                        <h5 className='spacer'>8 - Lyman Lake minimum pool: </h5><h5 className='spacer'>889.6 ac-ft, 5,947' elev.</h5></div>
+                    <div className='line'>
+                        <h5>9 - SRP balance (balance minus current order):</h5><h5> lots </h5></div>
+                    <div className='line'>
+                        <h5>10 - Zuni balance:</h5><h5>lots</h5></div>
+                    <div className='line'>
+                        <h4>Calculated Min Volume remaining on {endDate.toDateString()}:</h4><h5>lots</h5></div>
                 </div>                                  
                 <div className='bodyDiv' id='volToDeliver'>
                     <h4>Calculation of water volume to deliver to GHID Members:</h4>

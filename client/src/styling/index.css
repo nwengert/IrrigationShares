@@ -17,4 +17,17 @@
     overflow-x: hidden;
     background: linear-gradient(to right, whitesmoke, rgb(236, 236, 236));
 }
-
+.line{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+h4{
+    margin: 8px 6px 8px 6px;
+}
+h5{
+    margin: 4px 3px 4px 3px;
+}
+.spacer{
+    margin-top: 8px;
+}
