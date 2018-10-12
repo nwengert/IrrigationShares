@@ -1,18 +1,36 @@
 import React, { Component } from 'react'
+import Axios from 'axios';
 
 export default class Admin extends Component {
-    state = {
-        hoursPerShare: "",
-        owner: "",
-        phone: "",
-        email: "",
-        parcel: "",
-        area: "",
-        shareType: "",
-        shares: "",
-        used: "",
-        remaining: "",
-    };
+    constructor() {
+        super()
+        this.state = {
+                hoursPerShare: "",
+                owner: "",
+                phone: "",
+                email: "",
+                parcel: "",
+                area: "",
+                shareType: "",
+                shares: "",
+                used: "",
+                remaining: "",
+        };
+    }
+    componentDidMount() {
+        Axios({
+            method: "GET",
+            url: "/owners",
+            params: this.props.location.state
+        })
+            .then(response => {
+                const owners = response.data;
+                this.setState({ owner: owners })
+            })
+            .catch(function (err) {
+                console.log(err)
+            })
+    }
     render() {
         console.log(this.state);
         return (
