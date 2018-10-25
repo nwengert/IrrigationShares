@@ -74,9 +74,7 @@ export default class Admin extends Component {
                     </div>
                     <button>Clear</button>
                 </form>
-                <div className='adminSibs'></div>
-                <div className='adminSibs'></div>
-                <div className='adminSibs'></div>
+                <div className='shareHolderList'></div>
             </div>
 
         )
