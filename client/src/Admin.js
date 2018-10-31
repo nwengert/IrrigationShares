@@ -10,7 +10,6 @@ export default class Admin extends Component {
                 phone: "",
                 email: "",
                 parcel: "",
-                area: "",
                 shareType: "",
                 shares: "",
                 used: "",
@@ -43,7 +42,6 @@ export default class Admin extends Component {
                             onChange={e => this.setState({ hoursPerShare: e.target.value })}/>
                     </div>
                     <div className='filterInputsDiv'>
-
                         <input type="text"      placeholder="Name of owner"    className='filterInput'
                             value={this.state.owner}
                             onChange={e => this.setState({ owner: e.target.value })}/>
@@ -56,9 +54,6 @@ export default class Admin extends Component {
                         <input type="text"      placeholder="Parcel number"     className='filterInput'
                             value={this.state.parcel}
                             onChange={e => this.setState({ parcel: e.target.value })}/>
-                        <input type="text"      placeholder="Area"              className='filterInput'
-                            value={this.state.area}
-                            onChange={e => this.setState({ area: e.target.value })}/>
                         <input type="text"      placeholder="Type of share"     className='filterInput'
                             value={this.state.shareType}
                             onChange={e => this.setState({ shareType: e.target.value })}/>
@@ -71,6 +66,10 @@ export default class Admin extends Component {
                         <input type="text"      placeholder="Remaining amount"  className='filterInput'
                             value={this.state.remaining}
                             onChange={e => this.setState({ remaining: e.target.value })}/>
+                    </div>
+                    <div>
+                    <p>The share owner's name is: {this.state.owner}</p>
+
                     </div>
                     <button>Clear</button>
                 </form>
