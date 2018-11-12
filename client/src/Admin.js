@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Axios from 'axios';
+import axios from 'axios';
 
 export default class Admin extends Component {
     constructor() {
@@ -17,7 +17,7 @@ export default class Admin extends Component {
         };
     }
     componentDidMount() {
-        Axios({
+        axios({
             method: "GET",
             url: "/owners",
             params: this.props.location.state
@@ -32,6 +32,10 @@ export default class Admin extends Component {
     }
     render() {
         console.log(this.state);
+        const { owner } = this.state;
+        if(owner) {
+            
+        }
         return (
             <div className='adminWrapper'>
                 <form className='filterForm'>
@@ -73,7 +77,9 @@ export default class Admin extends Component {
                     </div>
                     <button>Clear</button>
                 </form>
-                <div className='shareHolderList'></div>
+                <div className='shareHolderList'>
+                    <p>{owner}</p>
+                </div>
             </div>
 
         )
